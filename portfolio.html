@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Goose Bistro | Pizza‑on‑Demand</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    nav a {
+      margin-right: 1em;
+      text-decoration: none;
+      color: #0066cc;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1.5em;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 0.5em;
+    }
+    label {
+      display: block;
+      margin: 0.5em 0 0.2em;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.3em;
+      box-sizing: border-box;
+    }
+    .radio-group,
+    .checkbox-group {
+      margin: 0.5em 0 1em;
+    }
+    .radio-group label,
+    .checkbox-group label {
+      display: block;
+      margin-left: 1.5em;
+    }
+    button {
+      padding: 0.5em 1em;
+      margin-right: 0.5em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Main</a>
+    <a href="#">Make an Order</a>
+    <a href="#">Contact Us</a>
+  </nav>
+
+  <h1>Black Goose Bistro | Pizza‑on‑Demand</h1>
+  <p>Our 12"&nbsp;wood‑fired pizzas are available for delivery. Build your custom pizza and we’ll deliver it within an hour.</p>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend>Your Information</legend>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+
+      <label for="phone">Telephone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="delivery-instructions">Delivery Instruction:</label>
+      <textarea id="delivery-instructions"
+                name="delivery_instructions"
+                rows="4"
+                maxlength="400"
+                placeholder="No more than 400 characters long"></textarea>
+    </fieldset>
+
+    <h2>Design Your Dream Pizza:</h2>
+
+    <fieldset>
+      <legend>Pizza specs</legend>
+
+      <p><strong>Crust (Choose one):</strong></p>
+      <div class="radio-group">
+        <label><input type="radio" name="crust" value="classic" required> Classic White</label>
+        <label><input type="radio" name="crust" value="multigrain"> Multigrain</label>
+        <label><input type="radio" name="crust" value="stuffed"> Cheese‑stuffed crust</label>
+        <label><input type="radio" name="crust" value="glutenfree"> Gluten‑free</label>
+      </div>
+
+      <p><strong>Toppings (Choose as many as you want):</strong></p>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="toppings" value="red-sauce"> Red Sauce</label>
+        <label><input type="checkbox" name="toppings" value="white-sauce"> White Sauce</label>
+        <label><input type="checkbox" name="toppings" value="mozzarella"> Mozzarella Cheese</label>
+        <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+        <label><input type="checkbox" name="toppings" value="mushrooms"> Mushrooms</label>
+        <label><input type="checkbox" name="toppings" value="peppers"> Peppers</label>
+        <label><input type="checkbox" name="toppings" value="anchovies"> Anchovies</label>
+      </div>
+
+      <label for="quantity"><strong>How many pizzas:</strong></label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+    </fieldset>
+
+    <button type="submit">Bring me a pizza!</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
+</body>
+</html>
